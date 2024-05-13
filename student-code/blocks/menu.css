@@ -1,0 +1,15 @@
+.menu {
+  height: 100%;
+  min-height: 720px;
+  max-height: 1120px;
+  background-image: url(../images/background_menu.svg);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: centerr;
+}
+
+.menu__title {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
