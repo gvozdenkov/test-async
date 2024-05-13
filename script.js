@@ -55,9 +55,11 @@ var checkW3CCss = async (projectPath) => {
 
       var results = await response.json();
 
-      var errorMessages = results.messages
-        ?.filter((m) => m.type === 'error')
-        .map((e) => makeErrorMessage(e, basename(filePath)));
+      var errorMessages =
+        results &&
+        results.messages
+          .filter((m) => m.type === 'error')
+          .map((e) => makeErrorMessage(e, basename(filePath)));
 
       errors.add(...errorMessages);
       console.log('-> processing:', basename(filePath));
